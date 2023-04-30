@@ -1,0 +1,63 @@
+﻿<Window x:Class="Random_Selector.CRUD"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Random_Selector"
+        mc:Ignorable="d"
+        Title="CRUD" Margin="10" Height="450" Width="800" Background="#FF31944E" Foreground="#FF2252E8" FontSize="14" FontWeight="Bold" FontStyle="Italic">
+    <Window.OpacityMask>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FFCA135F" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.OpacityMask>
+    <Window.BorderBrush>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FFE61818" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.BorderBrush>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="368*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="405*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txtID1" HorizontalAlignment="Left" Margin="145,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" IsEnabled="False" Background="White" FontWeight="Bold"/>
+        <TextBox x:Name="txtLevel1" HorizontalAlignment="Left" Margin="145,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" Background="White" FontWeight="Bold"/>
+        <TextBox x:Name="txtFName1" HorizontalAlignment="Left" Margin="145,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" Background="White" FontWeight="Bold"/>
+        <TextBox x:Name="txtLName1" HorizontalAlignment="Left" Margin="145,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" Background="White" FontWeight="Bold"/>
+        <Button x:Name="btnInsert1" Content="Insert" HorizontalAlignment="Left" Margin="244,272,0,0" VerticalAlignment="Top" Height="24" Width="108" Click="btnInsert1_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Add.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="244,322,0,0" VerticalAlignment="Top" Height="24" Width="108" Click="btnUpdate_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Update.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="101,266,0,0" VerticalAlignment="Top" Height="30" Width="108" Click="btnDelete_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Delete.jpeg" TileMode="None" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+        <ListBox x:Name="lstPrint"   Margin="5,10,34,0" SelectionChanged="lstPrint_SelectionChanged" Background="#FF1AF5E6" Grid.Column="2"/>
+        <TextBlock x:Name="lblId" HorizontalAlignment="Left" Margin="70,55,0,0" TextWrapping="Wrap" Text="Id" VerticalAlignment="Top" FontSize="14" Foreground="#FFE3EE0F"/>
+        <TextBlock x:Name="lblLevel" HorizontalAlignment="Left" Margin="57,107,0,0" TextWrapping="Wrap" Text="Level" VerticalAlignment="Top" Height="18" Width="48" FontSize="14" Background="#FF27A616" Foreground="#FFF3D828"/>
+        <TextBlock x:Name="lblFName" HorizontalAlignment="Left" Margin="37,159,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Height="26" Width="77" FontSize="14" Foreground="#FFE9F412"/>
+        <TextBlock x:Name="lblLName" HorizontalAlignment="Left" Margin="43,217,0,0" TextWrapping="Wrap" Text="Last  Name" VerticalAlignment="Top" Height="25" Width="76" FontSize="14" Foreground="#FFF3F614"/>
+        <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="5,362,0,0" VerticalAlignment="Top" Height="39" Width="108" Click="btnRefresh_Click" Grid.Column="2" >
+            <Button.Background>
+                <ImageBrush ImageSource="/refresh.jpeg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="101,322,0,0" VerticalAlignment="Top" Height="24" Width="108"  Click="btnBack_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Back.png"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>
